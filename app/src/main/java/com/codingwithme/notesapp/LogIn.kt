@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class LogIn : AppCompatActivity() {
     private lateinit var email_input: EditText
@@ -24,12 +25,14 @@ class LogIn : AppCompatActivity() {
             var loginintent = Intent(this,MainActivity::class.java)
             startActivity(loginintent)
             finish()
+            Toast.makeText(this,"LogIn Successful", Toast.LENGTH_SHORT).show()
 
         }
         btn_go.setOnClickListener {
             var accountintent = Intent(this,Register::class.java)
             startActivity(accountintent)
             finish()
+            Toast.makeText(this,"Going to SignUp page", Toast.LENGTH_SHORT).show()
         }
     }
 }
